@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInFragment">
+
+    <TextView
+        android:id="@+id/sign_in_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="121dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/sign_in"
+        android:textColor="#161826"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sign_in_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="60dp"
+        android:autofillHints="name"
+        android:background="@drawable/login_edittext_background"
+        android:backgroundTint="#E8E8E8"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/first_name"
+        android:inputType="text|textCapSentences"
+        android:paddingVertical="7dp"
+        android:textColorHint="#7B7B7B"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_title" />
+
+    <EditText
+        android:id="@+id/sign_in_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints="name"
+        android:background="@drawable/login_edittext_background"
+        android:backgroundTint="#E8E8E8"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/last_name"
+        android:inputType="text|textCapSentences"
+        android:paddingVertical="7dp"
+        android:textColorHint="#7B7B7B"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_first_name" />
+
+    <EditText
+        android:id="@+id/sign_in_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/login_edittext_background"
+        android:backgroundTint="#E8E8E8"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:inputType="textWebEmailAddress"
+        android:paddingVertical="7dp"
+        android:textColorHint="#7B7B7B"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_last_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="43dp"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#4E55D7"
+        android:fontFamily="@font/montserrat_bold"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:paddingVertical="14sp"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:textColor="#EAEAEA"
+        android:textSize="14sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_email" />
+
+    <TextView
+        android:id="@+id/sign_in_account_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/already_have_an_account"
+        android:textColor="#808080"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_button"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/sign_in_to_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/log_in"
+        android:textColor="#254FE6"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/sign_in_account_message"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_button"
+        tools:ignore="SmallSp" />
+
+    <LinearLayout
+        android:id="@+id/sign_in_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_account_message"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_google"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="11.17dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/sign_in_with_google"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sign_in_apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_google"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_apple"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="13.62dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/sign_in_with_apple"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
