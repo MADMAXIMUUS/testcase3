@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="15dp"
+    android:insetTop="5dp"
+    android:insetRight="15dp"
+    android:insetBottom="5dp"
+    android:visible="true">
+    <shape android:id="@+id/listview_background_shape">
+        <corners android:radius="1000dp" />
+        <solid android:color="#EEEFF4" />
+    </shape>
+</inset>

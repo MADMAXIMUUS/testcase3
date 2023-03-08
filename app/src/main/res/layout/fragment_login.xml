@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".presentation.login.LoginFragment">
 
     <TextView
         android:id="@+id/login_title"
@@ -33,11 +33,28 @@
         android:hint="@string/first_name"
         android:inputType="text|textPersonName"
         android:paddingVertical="7dp"
+        android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_title" />
+
+    <TextView
+        android:id="@+id/login_first_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/enter_first_name"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/login_first_name"
+        app:layout_constraintTop_toBottomOf="@id/login_first_name"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
 
     <EditText
         android:id="@+id/login_password"
@@ -53,13 +70,31 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:paddingVertical="7dp"
+        android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_first_name" />
 
+    <TextView
+        android:id="@+id/login_password_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/enter_password"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/login_password"
+        app:layout_constraintTop_toBottomOf="@id/login_password"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
+
     <ImageView
+        android:id="@+id/login_password_visibility_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
@@ -70,11 +105,12 @@
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_in_button"
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="43dp"
         android:layout_marginTop="99dp"
+        android:backgroundTint="#4E55D7"
         android:fontFamily="@font/montserrat_bold"
         android:insetLeft="0dp"
         android:insetTop="0dp"

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="Theme.Testcase3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -10,12 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">#FAF9FF</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
         <item name="android:navigationBarColor">#FAF9FF</item>
     </style>
-
-    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-    </style>
-
 </resources>

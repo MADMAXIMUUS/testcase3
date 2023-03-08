@@ -3,29 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.madmax.testcase3.LoginFragment"
+        android:name="ru.madmax.testcase3.presentation.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
-
-        <action
-            android:id="@+id/action_loginFragment_to_signInFragment2"
-            app:destination="@id/signInFragment2" />
-
-    </fragment>
+        tools:layout="@layout/fragment_login"/>
 
     <fragment
-        android:id="@+id/signInFragment2"
-        android:name="ru.madmax.testcase3.SignInFragment"
+        android:id="@+id/signInFragment"
+        android:name="ru.madmax.testcase3.presentation.signIn.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="ru.madmax.testcase3.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" /><action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment"/>
+        tools:layout="@layout/fragment_main" />
+    <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment" />
 
 </navigation>

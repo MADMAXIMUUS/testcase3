@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInFragment">
+    tools:context=".presentation.signIn.SignInFragment">
 
     <TextView
         android:id="@+id/sign_in_title"
@@ -33,11 +33,28 @@
         android:hint="@string/first_name"
         android:inputType="text|textCapSentences"
         android:paddingVertical="7dp"
+        android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_title" />
+
+    <TextView
+        android:id="@+id/sign_in_first_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/enter_first_name"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/sign_in_first_name"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_first_name"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
 
     <EditText
         android:id="@+id/sign_in_last_name"
@@ -53,11 +70,28 @@
         android:hint="@string/last_name"
         android:inputType="text|textCapSentences"
         android:paddingVertical="7dp"
+        android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_first_name" />
+
+    <TextView
+        android:id="@+id/sign_in_last_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/enter_last_name"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/sign_in_last_name"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_last_name"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
 
     <EditText
         android:id="@+id/sign_in_email"
@@ -73,11 +107,29 @@
         android:hint="@string/email"
         android:inputType="textWebEmailAddress"
         android:paddingVertical="7dp"
+        android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_last_name" />
+
+    <TextView
+        android:id="@+id/sign_in_email_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/email_is_not_valid"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/sign_in_email"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_email"
+        app:layout_goneMarginTop="2dp"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_in_button"
