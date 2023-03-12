@@ -7,7 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import ru.madmax.testcase3.R
-import ru.madmax.testcase3.domain.useCases.login.LoginUseCases
+import ru.madmax.testcase3.domain.useCase.LoginUseCases
 import ru.madmax.testcase3.util.LoginUiEvent
 import javax.inject.Inject
 
@@ -56,7 +56,7 @@ class SignInViewModel @Inject constructor(
             !uiState.value.emailError
         ) {
             viewModelScope.launch {
-                val userExist = loginUseCases.checkUserExistByEmail(uiState.value.email)
+                val userExist = loginUseCases.checkUserExistByEmailUseCase(uiState.value.email)
                 if (userExist) {
                     _eventFlow.emit(LoginUiEvent.ShowDialog(R.string.user_exist))
                 } else {

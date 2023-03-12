@@ -45,7 +45,7 @@ class SignInFragment : Fragment() {
             viewModel.eventFlow.collectLatest { event ->
                 when (event) {
                     LoginUiEvent.Login -> {
-                        view.findNavController().navigate(R.id.action_global_mainFragment)
+                        view.findNavController().navigate(R.id.fragment_home)
                     }
                     is LoginUiEvent.ShowDialog -> {
                         AlertDialog

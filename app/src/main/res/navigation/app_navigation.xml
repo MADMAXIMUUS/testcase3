@@ -6,6 +6,16 @@
     app:startDestination="@id/signInFragment">
 
     <fragment
+        android:id="@+id/fragment_profile"
+        android:name="ru.madmax.testcase3.presentation.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="ru.madmax.testcase3.presentation.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
         android:id="@+id/loginFragment"
         android:name="ru.madmax.testcase3.presentation.login.LoginFragment"
         android:label="fragment_login"
@@ -19,12 +29,6 @@
         <action
             android:id="@+id/action_signInFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="ru.madmax.testcase3.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
-    <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment" />
+    </fragment><action android:id="@+id/action_global_signInFragment" app:destination="@id/signInFragment"/>
 
 </navigation>

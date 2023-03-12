@@ -12,7 +12,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="upload_item">Upload item</string>
-    <string name="profile_name_title">Satri Adhi Pradana</string>
     <string name="change_photo">Change photo</string>
     <string name="profile">Profile</string>
     <string name="trade_store">Trade store</string>
@@ -32,4 +31,6 @@
     <string name="user_exist">The user already exists</string>
     <string name="user_not_exist">User is not found</string>
     <string name="alert_title">Alert</string>
+    <string name="location">Location</string>
+    <string name="search_hint">What are you looking for?</string>
 </resources>

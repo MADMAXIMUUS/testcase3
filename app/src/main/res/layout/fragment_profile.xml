@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".presentation.profile.ProfileFragment">
 
     <ImageView
         android:id="@+id/back_arrow"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="@string/profile_name_title"
+        tools:text="Satri Adhi Pradana"
         android:textColor="#3F3F3F"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -232,6 +232,7 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/profile_balance_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

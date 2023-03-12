@@ -6,7 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import ru.madmax.testcase3.R
-import ru.madmax.testcase3.domain.useCases.login.LoginUseCases
+import ru.madmax.testcase3.domain.useCase.LoginUseCases
 import ru.madmax.testcase3.util.LoginUiEvent
 import javax.inject.Inject
 
@@ -53,7 +53,7 @@ class LoginViewModel @Inject constructor(
             !uiState.value.passwordError
         ) {
             viewModelScope.launch {
-                val userExist = loginUseCases.checkUserExistByName(uiState.value.firstName)
+                val userExist = loginUseCases.checkUserExistByNameUseCase(uiState.value.firstName)
                 if (!userExist) {
                     _eventFlow.emit(LoginUiEvent.ShowDialog(R.string.user_not_exist))
                 } else {
