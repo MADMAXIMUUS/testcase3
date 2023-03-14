@@ -3,6 +3,7 @@ package ru.madmax.testcase3.presentation.home.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import ru.madmax.testcase3.databinding.ItemCategoryBinding
 import ru.madmax.testcase3.presentation.home.itemStates.CategoryItem
 import ru.madmax.testcase3.presentation.home.util.DelegateAdapter
@@ -14,7 +15,14 @@ class CategoryAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: CategoryItem) {
+            with(binding) {
+                Glide
+                    .with(itemCategoryIcon.context)
+                    .load(item.icon)
+                    .into(itemCategoryIcon)
 
+                itemCategoryTitle.text = item.title
+            }
         }
 
     }

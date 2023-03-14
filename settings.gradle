@@ -14,5 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "testcase3"
 include ':app'
-include ':data'
-include ':domain'
+include ':data-local'
+include ':domain-local'
+include ':data-remote'
+include ':domain-remote'

@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="114dp"
+    android:layout_height="149dp"
+    app:cardCornerRadius="9dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_brands_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/brand_1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/item_brands_add_to_cart_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_add"
+            android:tint="#545589"
+            app:fabCustomSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="10dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/item_brands_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="#22,50" />
+
+        <TextView
+            android:id="@+id/item_brands_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:maxWidth="61dp"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@id/item_brands_cost"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="Samsung s10" />
+
+        <TextView
+            android:id="@+id/item_brands_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/login_edittext_background_5"
+            android:backgroundTint="#D8C4C4C4"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="3dp"
+            android:textColor="#070604"
+            android:textSize="6sp"
+            app:layout_constraintBottom_toTopOf="@id/item_brands_title"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="Kids" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

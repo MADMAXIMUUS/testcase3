@@ -1,6 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="174dp"
+    android:layout_height="221dp"
+    app:cardCornerRadius="11dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_flash_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/brand_1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_flash_profile_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:padding="1dp"
+            android:src="@drawable/flash_sale_ava"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:strokeColor="#C0C0C0"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/item_flash_discount"
+            android:layout_width="49dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="30% off" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/item_flash_add_to_favorite_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_add_favorite"
+            android:tint="#545589"
+            app:fabCustomSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/item_flash_add_to_cart_button"
+            app:maxImageSize="15dp"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/item_flash_add_to_cart_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_add"
+            android:tint="#545589"
+            app:fabCustomSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="15dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/item_flash_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="17dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="$22,50" />
+
+        <TextView
+            android:id="@+id/item_flash_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:includeFontPadding="false"
+            android:maxWidth="87dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/item_flash_cost"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="New balance sneakers" />
+
+        <TextView
+            android:id="@+id/item_flash_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="#D8C4C4C4"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="3dp"
+            android:textColor="#070604"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@id/item_flash_title"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SmallSp"
+            tools:text="Kids" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

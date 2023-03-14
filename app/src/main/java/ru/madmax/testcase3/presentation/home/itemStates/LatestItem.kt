@@ -1,16 +1,13 @@
 package ru.madmax.testcase3.presentation.home.itemStates
 
-import android.net.Uri
-
 data class LatestItem(
-    val id: Int,
     val category: String,
-    val cost: String,
+    val cost: Int,
     val title: String,
-    val image: Uri
+    val image: String
 ) : AdapterItem {
 
-    override fun id(): Int = id
+    override fun id(): Any = title
 
     override fun content(): Any {
         return title

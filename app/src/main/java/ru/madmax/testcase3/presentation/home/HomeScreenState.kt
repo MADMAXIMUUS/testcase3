@@ -1,7 +1,7 @@
 package ru.madmax.testcase3.presentation.home
 
+import ru.madmax.testcase3.presentation.home.itemStates.*
+
 data class HomeScreenState(
-    val latest: List<String>,
-    val flashSale: List<String>,
-    val brands: List<String>
+    val parentRawItems: List<AdapterItem> = emptyList()
 )
