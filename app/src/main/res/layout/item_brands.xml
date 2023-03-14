@@ -17,18 +17,19 @@
             android:scaleType="centerCrop"
             tools:src="@drawable/brand_1" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageView
             android:id="@+id/item_brands_add_to_cart_button"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="7dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="#E5E9EF"
+            android:padding="6dp"
             android:src="@drawable/ic_add"
-            android:tint="#545589"
-            app:fabCustomSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="10dp"
+            app:tint="#545589"
             tools:ignore="ContentDescription" />
 
         <TextView

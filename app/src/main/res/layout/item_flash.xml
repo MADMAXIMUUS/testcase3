@@ -50,32 +50,35 @@
             tools:ignore="SmallSp"
             tools:text="30% off" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageView
             android:id="@+id/item_flash_add_to_favorite_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="7dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="#E5E9EF"
             android:src="@drawable/ic_add_favorite"
-            android:tint="#545589"
-            app:fabCustomSize="28dp"
+            app:tint="#545589"
+            android:padding="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/item_flash_add_to_cart_button"
             app:maxImageSize="15dp"
             tools:ignore="ContentDescription" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageView
             android:id="@+id/item_flash_add_to_cart_button"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="7dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="#E5E9EF"
+            android:padding="10dp"
             android:src="@drawable/ic_add"
-            android:tint="#545589"
-            app:fabCustomSize="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="15dp"
+            app:tint="#545589"
             tools:ignore="ContentDescription" />
 
         <TextView
