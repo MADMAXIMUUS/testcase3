@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.details.DetailsFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/details_main_image"
+        android:layout_width="328dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize9"
+        tools:src="@drawable/brand_1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="42dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="-19dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/login_edittext_background_14"
+        android:backgroundTint="#E5E9EF"
+        app:layout_constraintBottom_toBottomOf="@id/details_main_image"
+        app:layout_constraintEnd_toEndOf="@id/details_main_image">
+
+        <ImageView
+            android:id="@+id/details_add_to_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#545589"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="#545589"
+            app:layout_constraintBottom_toTopOf="@id/details_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_add_to_favorites" />
+
+        <ImageView
+            android:id="@+id/details_share"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_share2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#545589"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/details_image_vp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_main_image" />
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:maxWidth="186dp"
+        android:textColor="#161826"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_image_vp"
+        tools:text="New balance Sneakers" />
+
+    <TextView
+        android:id="@+id/details_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:textColor="#161826"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_image_vp"
+        tools:text="$22,50" />
+
+    <TextView
+        android:id="@+id/details_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:maxWidth="231dp"
+        android:textColor="#161826"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_title"
+        tools:ignore="SmallSp"
+        tools:text="Features waterproof, fire, air resistance shoes. all changed when the country of fire attacked" />
+
+    <ImageView
+        android:id="@+id/details_rating_star"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toStartOf="@id/details_description"
+        app:layout_constraintTop_toBottomOf="@id/details_description"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/details_rating_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:textColor="#161826"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/details_rating_star"
+        app:layout_constraintStart_toEndOf="@id/details_rating_star"
+        app:layout_constraintTop_toTopOf="@id/details_rating_star"
+        tools:ignore="SmallSp"
+        tools:text="3.9" />
+
+    <TextView
+        android:id="@+id/details_review_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:maxWidth="231dp"
+        android:textColor="#808080"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/details_rating_count"
+        app:layout_constraintStart_toEndOf="@id/details_rating_count"
+        app:layout_constraintTop_toTopOf="@id/details_rating_count"
+        tools:ignore="SmallSp"
+        tools:text="(4000 reviews)" />
+
+    <TextView
+        android:id="@+id/details_colors_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:text="@string/colors"
+        android:textColor="#737373"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_rating_star"
+        tools:ignore="SmallSp" />
+
+    <RadioGroup
+        android:id="@+id/details_colors_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/details_colors_title"
+        app:layout_constraintTop_toBottomOf="@id/details_colors_title">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/details_"
+            android:layout_width="34dp"
+            android:layout_height="26dp"
+            android:button="@null"
+            android:background="@drawable/radiobutton_selector"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
