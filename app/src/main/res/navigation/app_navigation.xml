@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/fragment_home">
+    app:startDestination="@id/signInFragment">
 
     <fragment
         android:id="@+id/fragment_profile"
@@ -19,16 +19,19 @@
         android:id="@+id/loginFragment"
         android:name="ru.madmax.testcase3.presentation.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login"/>
+        tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/signInFragment"
         android:name="ru.madmax.testcase3.presentation.signIn.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_signInFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-    </fragment><action android:id="@+id/action_global_signInFragment" app:destination="@id/signInFragment"/>
+    </fragment>
+    <action
+        android:id="@+id/action_global_signInFragment"
+        app:destination="@id/signInFragment" />
 
 </navigation>
